@@ -36,12 +36,14 @@ contract TerraTempoCore is ZamaEthereumConfig {
     uint256 public totalRecords;
     uint256 public totalGuidance;
     
+    // Record mappings
     mapping(uint256 => CropRecord) public records;
     mapping(address => uint256[]) public farmerRecords;
     mapping(address => bool) public experts;
     mapping(uint256 => Guidance) public guidanceList;
     mapping(address => mapping(uint256 => bool)) public hasVoted;
     
+    // Access control
     address public owner;
     uint256 public constant MIN_AGGREGATION_THRESHOLD = 10;
     
