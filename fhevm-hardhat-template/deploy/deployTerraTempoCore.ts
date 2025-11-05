@@ -5,6 +5,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
+  // Deploy TerraTempoCore with no constructor arguments
   const deployed = await deploy("TerraTempoCore", {
     from: deployer,
     args: [],
