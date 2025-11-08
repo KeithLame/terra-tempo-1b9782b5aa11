@@ -2,6 +2,7 @@
  * Design Tokens for Terra Tempo
  * Deterministically generated from: sha256("Terra Tempo" + "Sepolia" + "202511" + "TerraTempoCore.sol")
  * Theme: Modern Agricultural Minimalism
+ * Provides consistent styling across light and dark modes
  */
 
 export const designTokens = {
