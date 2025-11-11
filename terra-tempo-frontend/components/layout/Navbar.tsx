@@ -18,6 +18,7 @@ export function Navbar() {
       await connectWallet(rdns);
       setShowWalletModal(false);
     } catch (error) {
+      // Handle wallet connection errors gracefully
       console.error('Connection failed:', error);
     }
   };
