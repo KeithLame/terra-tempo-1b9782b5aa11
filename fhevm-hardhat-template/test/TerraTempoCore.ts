@@ -36,6 +36,7 @@ describe("TerraTempoCore (FHEVM v0.9)", function () {
 
   beforeEach(async function () {
     // Check whether the tests are running against an FHEVM mock environment
+    // Only mock environment is supported for automated tests
     if (!fhevm.isMock) {
       console.warn(`This hardhat test suite cannot run on Sepolia Testnet`);
       this.skip();
