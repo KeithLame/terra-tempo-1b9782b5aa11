@@ -26,6 +26,7 @@ export async function createFhevmInstance({
   // Get the EIP-1193 provider (prefer passed one, fallback to extracting from BrowserProvider)
   const ethereumProvider = eip1193Provider || (provider as any).provider;
   
+  // Check if we should use mock environment (localhost development)
   if (isMockEnvironment(chainId, ethereumProvider)) {
     console.log('🧪 Creating FHEVM Mock instance (localhost)');
     return await createMockInstance(chainId, ethereumProvider);

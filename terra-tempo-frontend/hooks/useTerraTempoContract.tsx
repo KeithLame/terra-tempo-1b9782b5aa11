@@ -14,6 +14,7 @@ export function useTerraTempoContract(provider: BrowserProvider | null, chainId:
       throw new Error('Provider or chain not connected');
     }
 
+    // Determine network based on chain ID
     const network = chainId === 31337 ? 'localhost' : 'sepolia';
     const address = getTerraTempoCoreAddress(network);
 
